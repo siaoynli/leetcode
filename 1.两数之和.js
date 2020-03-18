@@ -14,11 +14,13 @@ var twoSum = function (nums, target) {
     var tmp = []
     for (let index in nums) {
         var dif = target - nums[index]
-        if (tmp[dif]) {
-            return [tmp[dif], index]
+        var c = tmp[dif]
+        if (c) {
+            return [c, index]
         }
         tmp[nums[index]] = index
     }
+    return []
 };
 // @lc code=end
 
